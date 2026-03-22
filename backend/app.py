@@ -1,1 +1,3 @@
-print("AI Notes Chatbot Backend Started")
+
+print("AI Notes Chatbot is running...")
+print("RAG pipeline + FAISS integrated")
