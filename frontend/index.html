@@ -1,3 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Notes Chatbot</title>
+</head>
+<body>
+
 <h1>AI Notes Chatbot</h1>
-<input placeholder="Ask a question">
-<button>Ask</button>
+
+<input type="text" id="question" placeholder="Ask something...">
+<button onclick="askQuestion()">Ask</button>
+
+<p id="answer"></p>
+
+<script>
+async function askQuestion() {
+    let question = document.getElementById("question").value;
+
+    let response = await fetch("http://127.0.0.1:5000/ask", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({question: question})
+    });
+
+    let data = await response.json();
+    document.getElementById("answer").innerText = data.answer;
+}
+</script>
+
+</body>
+</html>
