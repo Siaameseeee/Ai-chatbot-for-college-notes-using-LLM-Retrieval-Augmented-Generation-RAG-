@@ -22,3 +22,24 @@ Configuration and environment management are handled through the .env file, whic
 Finally, the .gitignore file ensures that sensitive files, generated embeddings, and cache data are not uploaded to version control. The README.md file provides a human-readable explanation of the project, guiding users and evaluators on how the system works and how it can be executed.
 
 Overall, each subsection of the repository contributes to a clear and logical workflow. The data folder stores the academic content, the ingestion process converts that content into embeddings, the reasoning layer retrieves and interprets relevant information, the API layer manages communication, and the user interface allows students to interact with the system. Together, these components form a robust and exam-oriented AI chatbot that delivers accurate, context-aware answers directly from college notes using Retrieval-Augmented Generation.
+
+# AI Chatbot using LLM + RAG
+
+This project implements a Retrieval-Augmented Generation (RAG) chatbot using:
+- LangChain
+- FAISS
+- OpenAI-compatible LLMs
+- FastAPI
+- Streamlit
+
+## Setup
+1. Add documents to `data/docs`
+2. Set API key in `.env`
+3. Run ingestion
+4. Start API
+5. Launch UI
+
+## Use Cases
+- Internal knowledge base
+- PDF chat
+- Secure enterprise Q&A
